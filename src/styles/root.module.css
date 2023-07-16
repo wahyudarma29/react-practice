@@ -1,0 +1,19 @@
+.header {
+    background-color: lightgray;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.header a{
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.header a:hover{
+    color: gray;
+}
