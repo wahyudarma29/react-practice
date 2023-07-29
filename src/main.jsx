@@ -8,6 +8,7 @@ import ErrorPage from "./routes/error-page.jsx";
 import "normalize.css";
 import "./main.css";
 import HomePage from "./routes/home.jsx";
+import ArticleDetail from "./routes/article-detail.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             element: <h1>denpasar</h1>,
           },
         ],
+      },
+      {
+        path: "articles/:articleId",
+        element: <ArticleDetail />,
       },
     ],
   },

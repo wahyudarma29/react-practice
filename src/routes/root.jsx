@@ -1,13 +1,21 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import s from "../styles/root.module.css";
 
 export default function Root() {
+  function setActive(isActive) {
+    return isActive ? s.active : "";
+  }
+
   return (
     <div>
       {/* always use link to navigate, DO NOT use button */}
       <header className={s.header}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+        <NavLink className={({ isActive }) => setActive(isActive)} to="/">
+          Home
+        </NavLink>
+        <NavLink className={({ isActive }) => setActive(isActive)} to="/about">
+          About
+        </NavLink>
       </header>
 
       <Outlet />
